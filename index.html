@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Zakia 🎉</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+<style>
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background: #c792d9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+  }
+</style>
+</head>
+
+<body>
+
+<div class="bg-gray-100 rounded-3xl shadow-2xl p-6 sm:p-10 max-w-md w-full text-center">
+
+  <!-- FULL PINK HEADING -->
+  <h1 class="text-2xl sm:text-3xl font-extrabold text-pink-500 mb-4 whitespace-nowrap">
+    Happy Birthday Zakia
+  </h1>
+
+  <!-- Subheading -->
+  <p class="text-gray-800 font-medium mb-6">
+    Happy Birthday to the Best HR 🎉❤️
+  </p>
+
+  <!-- Message -->
+  <p class="text-gray-700 text-sm sm:text-base mb-4 leading-relaxed">
+    You are not just an HR who handles everything so perfectly,<br>
+    but also the most amazing friend I have 🤗
+  </p>
+
+  <p class="text-gray-700 text-sm sm:text-base mb-4 leading-relaxed">
+    Thank you for always being supportive, understanding<br>
+    and fun at the same time 😄
+  </p>
+
+  <p class="text-gray-700 text-sm sm:text-base mb-4 leading-relaxed">
+    May your day be filled with happiness, success and<br>
+    lots of smiles ✨
+  </p>
+
+  <p class="text-gray-700 text-sm sm:text-base mb-6">
+    Stay the same awesome person always 😊
+  </p>
+
+  <!-- Icons -->
+  <div class="text-4xl sm:text-5xl mb-6">
+    🎉 🎈 🎁
+  </div>
+
+  <!-- Button -->
+  <button onclick="celebrate()" 
+    class="bg-pink-500 text-white px-6 py-3 rounded-xl shadow hover:bg-pink-600 transition">
+    Click for a Surprise 🎊
+  </button>
+
+  <!-- Bottom text -->
+  <p id="surprise" class="mt-6 text-purple-600 font-semibold hidden">
+    Once again, Happy Birthday HR 🍰🥳
+  </p>
+
+</div>
+
+<script>
+function celebrate() {
+  document.getElementById("surprise").classList.remove("hidden");
+
+  confetti({
+    particleCount: 150,
+    spread: 70,
+    origin: { y: 0.6 }
+  });
+
+  setTimeout(() => {
+    confetti({ particleCount: 100, spread: 120, origin: { x: 0.1 } });
+    confetti({ particleCount: 100, spread: 120, origin: { x: 0.9 } });
+  }, 300);
+}
+</script>
+
+</body>
+</html>
